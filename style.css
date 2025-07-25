@@ -1,0 +1,266 @@
+/* --- General Styling --- */
+:root {
+    --primary-color: #0070d2; /* Salesforce Blue */
+    --secondary-color: #005fb2;
+    --background-color: #f4f7f9;
+    --text-color: #333;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-branding {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--white);
+    padding-top: 120px; /* Adjust for fixed navbar */
+    padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.hero-image {
+    flex-basis: 300px; /* Fixed size for the image container */
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    box-shadow: var(--shadow);
+}
+/* --- Style for the new Download Resume button --- */
+.download-button {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background-color: #ffffff; /* White background */
+    color: #0070d2; /* Blue text (your primary color) */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #0070d2; /* Blue border */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+
+/* --- About Me Section --- */
+.about-section {
+    background-color: var(--light-gray);
+}
+
+.about-section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* --- Skills Section --- */
+.skills-section {
+    background-color: var(--white);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+/* --- Project & Internship Sections --- */
+.projects-section, .experience-section {
+    background: var(--light-gray);
+}
+
+.project-card, .experience-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+.project-card h3, .experience-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* --- Certifications Section --- */
+.certifications-section {
+    background-color: var(--white);
+}
+
+.cert-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.cert-list li {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cert-list i {
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+/* --- Contact Section / Footer --- */
+.contact-section {
+    background: #2c3e50;
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.contact-section h2 {
+    color: var(--white);
+}
+
+.contact-details p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.contact-details a {
+    color: var(--white);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.contact-details a:hover {
+    opacity: 0.8;
+}
+
+.contact-details i {
+    margin-right: 0.8rem;
+}
